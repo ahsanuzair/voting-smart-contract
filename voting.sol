@@ -23,7 +23,7 @@ contract Voting {
     constructor(uint256 _durationInMinutes){
         i_owner = msg.sender;
         votingStartTime = block.timestamp;
-        votingEndTime = block.timestamp + (_durationInMinutes * 60);
+        votingEndTime = votingStartTime + (_durationInMinutes * 60);
     }
 
     struct Candidate {
